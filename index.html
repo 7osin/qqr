@@ -8,24 +8,8 @@
       body {
         margin: 0;
         font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        background: #000;
+        background: url("44e.png") center / cover no-repeat fixed;
         color: #111;
-      }
-      .bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        filter: blur(8px) brightness(0.9);
-        z-index: -2;
-      }
-      .bg-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.25);
-        z-index: -1;
       }
       .wrap {
         max-width: 900px;
@@ -59,10 +43,6 @@
     </style>
   </head>
   <body>
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="48.mp4" type="video/mp4" />
-    </video>
-    <div class="bg-overlay" aria-hidden="true"></div>
     <div class="wrap">
       <img src="d85.jpg" alt="الصورة" />
       <div class="laugh">هههههههههههههههههههههههههههههههههههههههه</div>
