@@ -8,33 +8,64 @@
       body {
         margin: 0;
         font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        background: #f2f2f2;
+        background: #000;
         color: #111;
+      }
+      .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: blur(8px) brightness(0.9);
+        z-index: -2;
+      }
+      .bg-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: -1;
       }
       .wrap {
         max-width: 900px;
         margin: 40px auto;
-        padding: 0 16px;
+        padding: 24px 16px;
         text-align: center;
       }
       img {
         width: 100%;
         height: auto;
-        max-width: 900px;
+        max-width: 720px;
         border-radius: 12px;
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
       }
-      .cap {
-        margin-top: 12px;
-        font-size: 14px;
-        color: #555;
+      .laugh {
+        margin-top: 14px;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+      }
+      @media (max-width: 600px) {
+        .wrap {
+          margin: 16px auto;
+          padding: 16px 12px;
+        }
+        img {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
   <body>
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="48.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-overlay" aria-hidden="true"></div>
     <div class="wrap">
       <img src="d85.jpg" alt="الصورة" />
-      <div class="cap">تمت مشاركة الصورة عبر رابط الدومين</div>
+      <div class="laugh">هههههههههههههههههههههههههههههههههههههههه</div>
     </div>
   </body>
 </html>
